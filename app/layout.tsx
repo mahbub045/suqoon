@@ -45,7 +45,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${theSeasons.variable} antialiased`}>
+      <body 
+        suppressHydrationWarning={true} 
+        className={`${theSeasons.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
