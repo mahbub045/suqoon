@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
                   className="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow animate-scale-in animate-delay-${index}"
                 >
                   <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center mb-4 bg-primary/10"
+                    className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-primary/10"
                   >
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
