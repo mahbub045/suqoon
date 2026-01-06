@@ -3,19 +3,7 @@
 import React, { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
-
-interface NavItem {
-  name: string;
-  link: string;
-}
-
-const NavMenu: NavItem[] = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Services", link: "/services" },
-  { name: "Projects", link: "/projects" },
-  { name: "Contact", link: "/contact" },
-];
+import { NavMenu } from "../../Data/Layout/NavMenuItmes";
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
