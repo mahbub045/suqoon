@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { NavMenu } from "../../Data/Layout/NavMenuItmes";
+import { NavMenu } from "../../../Data/Layout/NavMenuItmes";
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="w-full lg:w-10/12 bg-transparent mx-auto px-4 lg:px-0 py-4 relative text-black">
+    <header className="w-full lg:w-10/12 bg-transparent mx-auto px-4 lg:px-0 py-4 relative text-white">
       <nav className="flex justify-between items-center">
         {/* Logo */}
         <div className="w-12 h-12 flex-shrink-0">
@@ -31,7 +31,7 @@ const NavBar: React.FC = () => {
             <Phone size={16} />
             <span className="ml-2">+123 456 8910</span>
           </a>
-          <button className="px-5 py-2.5 rounded-full border-2 border-black text-sm hover:bg-white hover:text-black transition-all">
+          <button className="px-5 py-2.5 rounded-full border-2 border-white text-sm hover:bg-white hover:text-black transition-all">
             Book Now
           </button>
         </div>
@@ -62,8 +62,8 @@ const NavBar: React.FC = () => {
           </div>
 
           {/* Mobile Buttons Area */}
-          <div className="flex flex-col space-y-3 pt-4 border-t border-black/10">
-            {/* Phone Button - Now styled like "Book Now" */}
+          <div className="flex flex-col space-y-3 pt-4 border-t border-white/10">
+            {/* Phone Button */}
             <a 
               href="tel:+1234568910" 
               className="flex justify-center items-center space-x-2 px-5 py-3 rounded-full border-2 border-white/50 text-sm font-semibold active:bg-white active:text-black transition-all"
@@ -73,7 +73,7 @@ const NavBar: React.FC = () => {
             </a>
 
             {/* Book Now Button */}
-            <button className="w-full px-5 py-3 rounded-full border-2 border-black bg-white text-black font-bold text-sm">
+            <button className="w-full px-5 py-3 rounded-full border-2 border-white bg-white text-black font-bold text-sm">
               Book Now
             </button>
           </div>
