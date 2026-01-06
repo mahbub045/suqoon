@@ -9,8 +9,24 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: #2e9062;
+  --font-sans: var(--font-theseasons);
   --font-mono: var(--font-geist-mono);
+
+
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  --animate-fade-in-up: fade-in-up 0.8s ease-out;
 }
 
 /* @media (prefers-color-scheme: light) {
