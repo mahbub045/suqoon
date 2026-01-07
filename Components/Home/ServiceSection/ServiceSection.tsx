@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { services } from '@/Data/ServiceSectionFeatures/ServiceSectionFeatures';
+import { services } from '@/Data/Home/ServiceSectionFeatures/ServiceSectionFeatures';
+import Image from 'next/image';
 
 
 const ServicesSection: React.FC = () => {  
   return (
-    <section className="py-6 lg:py-16 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-6 lg:py-30 px-4 bg-slate-100">
+      <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
@@ -34,9 +35,10 @@ const ServicesSection: React.FC = () => {
               {/* Image */}
               <div className="w-full lg:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96">
-                  <img
+                  <Image 
                     src={service.image}
                     alt={service.imageAlt}
+                    fill
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -55,14 +57,14 @@ const ServicesSection: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Button */}
-                <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 group">
+                <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold cursor-pointer transition-colors flex items-center gap-2 group">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

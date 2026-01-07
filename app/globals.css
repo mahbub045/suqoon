@@ -48,10 +48,15 @@
     }
   }
   
-  --animate-fade-in-up: fade-in-up 0.8s ease-out;
+  /* --animate-fade-in-up: fade-in-up 0.8s ease-out; */
   --animate-fade-in-right: fade-in-right 0.8s ease-out;
 }
 
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
 
   .animate-scale-in {
     animation: scale-in 0.8s ease-out forwards;

@@ -1,9 +1,9 @@
-import { Features } from "@/Data/AboutSectionFeatures/AboutSectionFeatures";
+import { Features } from "@/Data/Home/AboutSectionFeatures/AboutSectionFeatures";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 bg-gray-50">
+      <div className="w-11/12 mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
           <div className="my-auto animate-fade-in-right opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow animate-scale-in animate-delay-${index}"
+                  className={`bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow animate-scale-in animate-delay-${index}`}
                 >
                   <div
                     className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-primary/10"
