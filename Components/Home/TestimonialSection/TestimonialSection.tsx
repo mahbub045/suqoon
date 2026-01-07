@@ -37,7 +37,7 @@ const TestimonialSection: React.FC = () => {
               </div>
 
               {/* Quote Icon */}
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-gray-200 opacity-50" />
+              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/30 opacity-50" />
 
               {/* Testimonial Text */}
               <p className="text-gray-700 text-base text-justify leading-relaxed mb-6 relative z-10">
