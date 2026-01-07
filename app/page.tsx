@@ -3,6 +3,7 @@ import FeatureProjectsSection from "@/Components/Home/FeatureProjectsSection/Fea
 import HeroSection from "@/Components/Home/HeroSection/HeroSection";
 import ServicesSection from "@/Components/Home/ServiceSection/ServiceSection";
 import StatsSection from "@/Components/Home/StatsSection/StatsSection";
+import TestimonialSection from "@/Components/Home/TestimonialSection/TestimonialSection";
 import NavBar from "@/Components/Layout/NavBar/NavBar";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <FeatureProjectsSection />
       <StatsSection />
+      <TestimonialSection />
     </main>
   );
 }
