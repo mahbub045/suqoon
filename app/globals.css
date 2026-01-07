@@ -3,24 +3,156 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #2e9062;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: #2e9062;
+  --font-sans: var(--font-theseasons);
   --font-mono: var(--font-geist-mono);
+
+
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* --animate-fade-in-up: fade-in-up 0.8s ease-out; */
+  --animate-fade-in-right: fade-in-right 0.8s ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-delay-0 {
+    animation-delay: 0ms;
+  }
+
+  .animate-delay-1 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-2 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-3 {
+    animation-delay: 300ms;
+  }
+
+/* @media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+    --background: #020202;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
+
+@layer base {
+  body {
+    font-family: var(--font-theseasons);
+  }
+}
+
+/* @layer utilities {
+  .font-seasons {
+    font-family: var(--font-theseasons);
+  }
+} */
+
+@layer utilities {
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+}
+
+/* tap-top */
+.tap-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.tap-top:hover {
+  opacity: 1;
+}
+
+.tap-top-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
