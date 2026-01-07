@@ -5,7 +5,7 @@ import { testimonials } from '@/Data/Home/TestimonialSectionFeatures/Testimonial
 const TestimonialSection: React.FC = () => {
   return (
     <section className="w-full bg-slate-100 py-16 md:py-20">
-      <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-0">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-2">
