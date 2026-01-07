@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react"; // Added useEffect
+import React, { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { NavMenu } from "../../../Data/Layout/NavMenuItmes";
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false); // State to track scroll
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,10 +32,10 @@ const NavBar: React.FC = () => {
         }`}
     >
       <nav 
-        className={`mx-auto transition-all duration-500 ease-in-out px-4 flex justify-between items-center
+        className={`mx-auto transition-all duration-500 ease-in-out px-4 lg:px-0 flex justify-between items-center
           ${scrolled 
-            ? "max-w-7xl" 
-            : "w-full lg:max-w-7xl"
+            ? "w-11/12" 
+            : "w-full lg:w-11/12"
           }`}
       >
         {/* Logo */}
@@ -58,7 +58,7 @@ const NavBar: React.FC = () => {
             <Phone size={16} />
             <span className="ml-2">+123 456 8910</span>
           </a>
-          <button className={`px-5 py-2.5 rounded-full border-2 text-sm transition-all 
+          <button className={`px-5 py-2.5 rounded-full border-2 text-sm cursor-pointer transition-all 
             ${scrolled 
               ? "bg-primary text-white hover:bg-transparent hover:text-black" 
               : "border-white hover:bg-white hover:text-black"}`}>

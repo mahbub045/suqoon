@@ -7,7 +7,7 @@ import Image from 'next/image';
 const ServicesSection: React.FC = () => {  
   return (
     <section className="py-6 lg:py-30 px-4 bg-slate-100">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">
@@ -57,14 +57,14 @@ const ServicesSection: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Button */}
-                <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2 group">
+                <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold cursor-pointer transition-colors flex items-center gap-2 group">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

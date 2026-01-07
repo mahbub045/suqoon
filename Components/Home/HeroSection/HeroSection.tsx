@@ -28,10 +28,10 @@ const HeroSection: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up opacity-0 [animation-delay:800ms] [animation-fill-mode:forwards]">
-          <button className="px-10 py-4 bg-primary text-white rounded-full text-lg font-medium hover:bg-primary/90 transition-all">
+          <button className="px-10 py-4 bg-primary text-white rounded-full text-lg font-medium hover:bg-primary/90 cursor-pointer transition-all">
             Explore Projects
           </button>
-          <button className="px-10 py-4 bg-transparent text-white border-2 border-white rounded-full text-lg font-medium hover:bg-white/10 transition-all">
+          <button className="px-10 py-4 bg-transparent text-white border-2 border-white rounded-full text-lg font-medium hover:bg-white/10 cursor-pointer transition-all">
             Learn More
           </button>
         </div>

@@ -5,8 +5,8 @@ import { properties } from '@/Data/Home/ProjectsFeatures/ProjectsFeatures';
 
 const FeatureProjectsSection = () => {
   return (
-    <section className="px-4 md:px-8 lg:px-16 py-12 lg:py-30 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-gray-50">
+      <div className="w-11/12 mx-auto py-10 lg:py-30">
         {/* Header */}
         <div className="flex items-start justify-between mb-12">
           <div>
@@ -19,14 +19,14 @@ const FeatureProjectsSection = () => {
             </h2>
           </div>
 
-          <button className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300 font-semibold">
+          <button className="hidden md:flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors duration-300 font-semibold cursor-pointer">
             View All Projects
             <ArrowRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Property Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer">
           {properties.map((property) => (
             <div
               key={property.id}
