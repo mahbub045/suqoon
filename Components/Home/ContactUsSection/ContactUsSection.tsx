@@ -47,7 +47,7 @@ const ContactUsSection: React.FC = () => {
             {/* Contact Items */}
             <div className="space-y-6">
               {/* Phone */}
-              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl shadow-md">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -63,7 +63,7 @@ const ContactUsSection: React.FC = () => {
               </div>
 
               {/* Email */}
-              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl shadow-md">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
@@ -79,7 +79,7 @@ const ContactUsSection: React.FC = () => {
               </div>
 
               {/* Address */}
-              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl">
+              <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-xl shadow-md">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
@@ -94,7 +94,7 @@ const ContactUsSection: React.FC = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-10">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-md">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Send us a Message
             </h3>
@@ -180,7 +180,7 @@ const ContactUsSection: React.FC = () => {
               {/* Submit Button */}
               <button
                 onClick={handleSubmit}
-                className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-full hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2"
+                className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-full hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Send className="w-5 h-5" />
                 Send Message

@@ -1,4 +1,4 @@
-import { NavItem } from "../../Types/Layout/NavItems/NavItemTypes";
+import { NavItem } from "../../../Types/Layout/NavItems/NavItemTypes";
 
 export const NavMenu: NavItem[] = [
   { name: "Home", link: "/" },
