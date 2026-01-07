@@ -1,23 +1,22 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { NavMenu } from "../../../Data/Layout/NavMenuItmes";
+import { NavMenu } from "@/Data/Layout/Navbar/NavbarMenu";
 import Image from "next/image";
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isReady, setIsReady] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 20);
     };
+    handleScroll();
+    setIsReady(true); 
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -26,6 +25,7 @@ const NavBar: React.FC = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out
+        ${!isReady ? "opacity-0" : "opacity-100"} 
         ${scrolled 
           ? "bg-white text-black shadow-md py-2"
           : "bg-transparent text-white py-4"
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8 lg:space-x-12 text-sm font-medium">
           {NavMenu.map((item) => (
-            <Link key={item.name} href={item.link} className="hover:opacity-70 transition-opacity">
+            <Link key={item.name} href={item.link} className="hover:text-primary">
               {item.name}
             </Link>
           ))}
@@ -54,7 +54,8 @@ const NavBar: React.FC = () => {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex justify-center items-center space-x-4">
-          <a href="tel:+1234568910" className="flex items-center text-sm font-medium">
+          <a href="tel:+1234568910" className={`flex items-center text-sm font-medium
+            ${scrolled ? "text-primary" : "text-white"}`}>
             <Phone size={16} />
             <span className="ml-2">+123 456 8910</span>
           </a>

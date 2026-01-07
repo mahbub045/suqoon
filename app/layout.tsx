@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import TapTop from "@/Components/Layout/TapTop/TapTop";
+import { Metadata } from "next";
 
 const theSeasons = localFont({
   src: [
@@ -38,6 +40,11 @@ const theSeasons = localFont({
   display: "swap",
 });
 
+export const metadata: Metadata = {
+  title: "SUQOON",
+  description: "SUQOON is a leading land development company specializing in real estate investment opportunities.",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -50,6 +57,7 @@ export default function RootLayout({
         className={`${theSeasons.variable} antialiased`}
       >
         {children}
+        <TapTop />
       </body>
     </html>
   );
