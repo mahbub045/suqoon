@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
         ${!isReady ? "opacity-0" : "opacity-100"} 
         ${scrolled 
           ? "bg-white text-black shadow-md py-2"
-          : "bg-transparent text-white py-4"
+          : "bg-transparent text-white pt-4"
         }`}
     >
       <nav 
@@ -39,8 +39,15 @@ const NavBar: React.FC = () => {
           }`}
       >
         {/* Logo */}
-        <div className="w-12 h-12 shrink-0">
-          <Image src="/images/logo.jpg" alt="Logo" width={48} height={48} className="w-full h-full object-cover rounded-md" />
+        <div className="w-18 h-18 shrink-0">
+          <Image 
+            src="/images/logo.png" 
+            alt="Logo"
+            width={48} 
+            height={48} 
+            className={`w-full h-full object-cover rounded-md
+              ${scrolled ? "" : "invert" }
+            `} />
         </div>
 
         {/* Desktop Links */}
