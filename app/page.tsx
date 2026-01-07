@@ -1,4 +1,6 @@
+import AboutSection from "@/Components/Home/AboutSection/AboutSection";
 import HeroSection from "@/Components/Home/HeroSection/HeroSection";
+import ServicesSection from "@/Components/Home/ServiceSection/ServiceSection";
 import NavBar from "@/Components/Layout/NavBar/NavBar";
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <main>
       {/* <NavBar /> */}
       <HeroSection />
+      <AboutSection />
+      <ServicesSection />
     </main>
   );
 }
