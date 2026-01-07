@@ -25,12 +25,12 @@ const theSeasons = localFont({
     },
     {
       path: "../public/fonts/theseasons/Fontspring-DEMO-theseasons-bd.otf",
-      weight: "700",
+      weight: "900",
       style: "normal",
     },
     {
       path: "../public/fonts/theseasons/Fontspring-DEMO-theseasons-bdit.otf",
-      weight: "700",
+      weight: "900",
       style: "italic",
     },
   ],

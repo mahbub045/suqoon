@@ -1,4 +1,4 @@
-import { Features } from "@/Data/AboutSectionFeatures/AboutSectionFeatures";
+import { Features } from "@/Data/Home/AboutSectionFeatures/AboutSectionFeatures";
 
 const AboutSection: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const AboutSection: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow animate-scale-in animate-delay-${index}"
+                  className={`bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-shadow animate-scale-in animate-delay-${index}`}
                 >
                   <div
                     className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-primary/10"

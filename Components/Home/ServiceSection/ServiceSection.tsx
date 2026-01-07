@@ -1,11 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { services } from '@/Data/ServiceSectionFeatures/ServiceSectionFeatures';
+import { services } from '@/Data/Home/ServiceSectionFeatures/ServiceSectionFeatures';
+import Image from 'next/image';
 
 
 const ServicesSection: React.FC = () => {  
   return (
-    <section className="py-6 lg:py-16 px-4 bg-gray-50">
+    <section className="py-6 lg:py-30 px-4 bg-slate-100">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -34,9 +35,10 @@ const ServicesSection: React.FC = () => {
               {/* Image */}
               <div className="w-full lg:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl h-80 lg:h-96">
-                  <img
+                  <Image 
                     src={service.image}
                     alt={service.imageAlt}
+                    fill
                     className="w-full h-full object-cover"
                   />
                 </div>
