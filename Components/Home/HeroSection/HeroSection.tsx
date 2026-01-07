@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden -mt-20 py-40">
 
       <div className="absolute inset-0 bg-black/70 z-0"></div>
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-white to-transparent z-10"></div>
+      <div className="absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-white to-transparent z-10"></div>
 
       <div className="relative z-20 w-full lg:w-10/12 mx-auto px-4 lg:px-0 pt-16 pb-8">
 

@@ -2,7 +2,7 @@ import { Features } from "@/Data/Home/AboutSectionFeatures/AboutSectionFeatures"
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-white">
       <div className="w-11/12 mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
