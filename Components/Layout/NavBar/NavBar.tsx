@@ -45,7 +45,7 @@ const NavBar: React.FC = () => {
             alt="Logo"
             width={48} 
             height={48} 
-            className={`w-full h-full object-cover rounded-md
+            className={`w-full h-full object-contain rounded-md
               ${scrolled ? "" : "invert" }
             `} />
         </div>
