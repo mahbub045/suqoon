@@ -4,19 +4,34 @@ import { NavMenu } from "@/Data/Layout/Navbar/NavbarMenu";
 import { Menu, Phone, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useState } from "react";
 
 const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Ensure correct background when the page is refreshed while already scrolled,
+    // including when the browser restores scroll position after load.
+    handleScroll();
+    const rafId = window.requestAnimationFrame(handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    window.addEventListener("load", handleScroll);
+    window.addEventListener("pageshow", handleScroll);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("load", handleScroll);
+      window.removeEventListener("pageshow", handleScroll);
+    };
   }, []);
 
   return (
