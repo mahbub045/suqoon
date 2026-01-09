@@ -1,32 +1,42 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { socialLinks, quickLinks, services } from '@/Data/Layout/Footer/FooterMenu';
-import Image from 'next/image';
+import {
+  quickLinks,
+  services,
+  socialLinks,
+} from "@/Data/Layout/Footer/FooterMenu";
+import Image from "next/image";
+import React, { useState } from "react";
 
 const FooterSection: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = () => {
-    console.log('Subscribed:', email);
+    console.log("Subscribed:", email);
   };
- 
+
   return (
     <footer className="w-full bg-slate-800 text-gray-300">
       {/* Main Footer Content */}
       <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-0 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-6">
-
+          <div className="space-y-1">
             {/* Logo */}
-            <div className="w-12 h-12 shrink-0">
-                <Image src="/images/logo.jpg" alt="Logo" width={48} height={48} className="w-full h-full object-cover rounded-md" />
+            <div className="w-18 h-18 shrink-0">
+              <Image
+                src="/images/logo-white.png"
+                alt="Logo"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover rounded-md"
+              />
             </div>
 
             {/* Tagline */}
             <p className="text-gray-400 leading-relaxed">
-              Your trusted partner in land development and real estate investment. Building futures, one plot at a time.
+              Your trusted partner in land development and real estate
+              investment. Building futures, one plot at a time.
             </p>
 
             {/* Social Links */}
@@ -82,9 +92,10 @@ const FooterSection: React.FC = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-6">Stay Updated</h3>
             <p className="text-gray-400 mb-6">
-              Subscribe to our newsletter for the latest investment opportunities.
+              Subscribe to our newsletter for the latest investment
+              opportunities.
             </p>
-            
+
             <div className="flex gap-2">
               <input
                 type="email"
